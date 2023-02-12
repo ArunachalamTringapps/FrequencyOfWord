@@ -38,6 +38,5 @@ class Frequency
         String newString=sb.toString().replace("\n", " ");
         Frequency.count(newString);
 
-
     }
 }
