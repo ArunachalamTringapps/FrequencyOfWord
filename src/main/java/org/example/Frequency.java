@@ -35,7 +35,7 @@ class Frequency
         while ((nextline=br.readLine())!=null){
             sb.append(nextline);
         }
-        String newString=sb.toString().replaceAll("\n", " ");
+        String newString=sb.toString().replace("\n", " ");
         Frequency.count(newString);
 
 
