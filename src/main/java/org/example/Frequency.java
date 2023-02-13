@@ -36,7 +36,6 @@ class Frequency
             nextline=nextline+".";
             sb.append(nextline);
         }
-//        String newString=sb.toString().replace("\n", " ");
         Frequency.count(sb.toString());
 
     }
