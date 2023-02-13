@@ -33,9 +33,10 @@ class Frequency
         String nextline;
         StringBuilder sb=new StringBuilder();
         while ((nextline=br.readLine())!=null){
-            nextline=nextline+".";
+            nextline=nextline.concat(",");
             sb.append(nextline);
         }
+//        String newString=sb.toString().replace("\n", " ");
         Frequency.count(sb.toString());
 
     }
