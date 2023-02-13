@@ -36,7 +36,6 @@ class Frequency
             nextline=nextline.concat(",");
             sb.append(nextline);
         }
-
         Frequency.count(sb.toString());
 
     }
