@@ -6,6 +6,7 @@ import java.util.*;
 
 class Frequency
 {
+    static Logger l= Logger.getLogger(Frequency.class.getName());
     static void count(String str)
     {
         Map<String,Integer>hm=new HashMap<>();
@@ -17,7 +18,7 @@ class Frequency
                 hm.put(s, 1);
             }
         }
-        Logger l= Logger.getLogger(Frequency.class.getName());
+
         Queue<Map.Entry<String,Integer>> pq=new PriorityQueue<>((a,b)-> b.getValue()-a.getValue());
         pq.addAll(hm.entrySet());
         while(!pq.isEmpty())
@@ -36,7 +37,7 @@ class Frequency
             nextline=nextline.concat(",");
             sb.append(nextline);
         }
-        System.out.println(sb);
+        l.log(Level.INFO,()->""+sb);
         Frequency.count(sb.toString());
 
     }
